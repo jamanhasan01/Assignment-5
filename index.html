@@ -3,84 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-5</title>
+    <title>Donation Page</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- this link for daisy Ui -->
+    <!-- Daisy UI and Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <!-- header section  start-->
-     <header>
-        <!-- navbar section -->
+    <!-- Header section start -->
+    <header>
+        <!-- Navbar section -->
         <div class="bg-[#F9F7F3]">
             <nav class="w-[90%] mx-auto flex justify-between py-8">
                 <button class="btn bg-[#B4F461] text-xl  px-7">Blog</button>
                 <div class="flex justify-center items-center gap-4">
-                    <img src="./assets/logo.png" alt="">
+                    <img src="./assets/logo.png" alt="Logo">
                     <h4 class="text-xl font-bold">Donate Bangladesh</h4>
                 </div>
                 <div class="flex justify-center items-center gap-3">
-                    <img src="./assets/coin.png" alt="">
-                    <h4 class="text-xl font-bold text-gray-400"><span id="totalAmount">5500</span> BDT</h4>
+                    <img src="./assets/coin.png" alt="Coin">
+                    <h4 class="text-xl font-bold text-gray-600"><span id="totalAmount">5500</span> BDT</h4>
                 </div>
-             </nav>
+            </nav>
         </div>
-        <!-- ----navigate page button----- -->
+        <!-- Navigation buttons for pages -->
         <div class="w-[90%] mx-auto flex justify-center py-8 gap-3">
             <button id="donationPage" class="btn active2  text-gray-400 border-gray-400 text-xl  px-7  hover:bg-[#B4F461] hover:border-[#B4F461] hover:text-black">Donation</button>
             <button id="historyPage" class="btn btn-outline text-gray-400 border-gray-400  text-xl px-7  hover:bg-[#B4F461] hover:border-[#B4F461] hover:text-black">History</button>
         </div>
     </header>  
+
+    <!-- Main content -->
     <main class="main">
         <section>
             <div class="w-[90%] mx-auto">
-                <!-- card wrapper div -->
-                <div class="flex flex-col">
-                    <!-- single card div start-->
-                    <div class="flex flex-1 p-6 border-gray-300 border-2 rounded-xl gap-5">
-                        <img class=" h-[200x]"  src="./assets/noakhali.png" alt="">
-                        <!-- content -->
-                        <div  class=" flex flex-col items-start justify-between">
-                            <div class="flex px-3 py-2 bg-slate-100 text-gray-300 text-xl font-bold rounded-lg gap-2">
-                                <img src="./assets/coin.png" alt="">
-                                <h5 id="addMoney">0 BDT</h5>
-                            </div>
-
-                            <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
-
-                            <p class="text-gray-500 text-lg"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-
-                            <input id="inputAmount" type="text" class="px-7 py-3 border-gray-200 border-2 rounded-lg w-full" placeholder="Write Donation Amount">
-
-                            <button id="donateBtn" class="btn bg-[#B4F461] text-xl  px-7 w-full">Donate Now</button>
-                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
-                                <div class="modal-box flex justify-center items-center text-center flex-col">
-                                  <h2 class="text-4xl font-bold">Congrate!</h2>
-                                  <img class="mt-5" src="./assets/coin.png" alt="">
-                                  <p class="py-4 text-lg">You Have Donated For Humankind</p>
-                                  <h3 class="text-2xl font-bold">successfully</h3>
-                                  <div class="modal-action flex justify-center">
-                                    <form method="dialog">
-                                      <button class="btn font-xl font-bold">Close confirmation</button>
-                                    </form>
-                                  </div>
-                                </div>
-                              </dialog>
-                        </div>
-                    </div>
-
-           
-                    
-                    <!-- single card div end-->
+                <!-- Card wrapper div -->
+                <div id="donationWrap" class="show flex-col ">
+                    <!-- Cards will be dynamically injected here by js -->
                 </div>
+
+                <!-- history wrapper div -->
+                 <div id="historyWrap">
+
+                 </div>
             </div>
         </section>
-
-
     </main>
 
-    <script src="./script.js"></script>
+    <!-- modal part -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box flex justify-center items-center text-center flex-col">
+            <h2 class="text-4xl font-bold">Congrats!</h2>
+            <img class="mt-5" src="./assets/coin.png" alt="Coin">
+            <p class="py-4 text-lg">You Have Donated For Humankind</p>
+            <h3 class="text-2xl font-bold">Successfully</h3>
+            <div class="modal-action flex justify-center">
+                <form method="dialog">
+                    <button class="btn font-xl font-bold">Close confirmation</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
+    <script src="./script.js"></script>
+    <script src="./navigate.js"></script>
 </body>
 </html>

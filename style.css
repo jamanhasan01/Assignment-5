@@ -12,3 +12,10 @@
     background-color:#B4F461 !important;
     color: black !important;
 }
+
+.show{
+    display: flex;
+}
+.hide{
+    display:none;
+}
