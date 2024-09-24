@@ -1,0 +1,14 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root:has(:is(.modal-open,.modal:target,.modal-toggle:checked + .modal,.modal[open])){
+    scrollbar-gutter:  unset !important;
+}
+.active2{
+    background-color:#B4F461 !important;
+    color: black !important;
+}
