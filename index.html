@@ -11,12 +11,12 @@
 </head>
 <body>
     <!-- Header section start -->
-    <header>
+    <header class="fixed-header bg-white h-[200px]">
         <!-- Navbar section -->
         <div class="bg-[#F9F7F3]">
-            <nav class="w-[90%] mx-auto flex justify-between py-8">
-                <button class="btn bg-[#B4F461] text-xl  px-7">Blog</button>
-                <div class="flex justify-center items-center gap-4">
+            <nav class="w-[90%] mx-auto flex justify-between py-5">
+                <a href="./blog.html"><button class="btn bg-[#B4F461] text-xl  px-7">Blog</button></a>
+                <div class="hidden justify-center items-center gap-4 lg:flex">
                     <img src="./assets/logo.png" alt="Logo">
                     <h4 class="text-xl font-bold">Donate Bangladesh</h4>
                 </div>
@@ -38,12 +38,12 @@
         <section>
             <div class="w-[90%] mx-auto">
                 <!-- Card wrapper div -->
-                <div id="donationWrap" class="show flex-col ">
+                <div id="donationWrap" class="show gap-6 flex-col ">
                     <!-- Cards will be dynamically injected here by js -->
                 </div>
 
                 <!-- history wrapper div -->
-                 <div id="historyWrap">
+                 <div id="historyWrap" class="flex flex-col">
 
                  </div>
             </div>
@@ -59,7 +59,7 @@
             <h3 class="text-2xl font-bold">Successfully</h3>
             <div class="modal-action flex justify-center">
                 <form method="dialog">
-                    <button class="btn font-xl font-bold">Close confirmation</button>
+                    <button class="myModalBtn btn font-xl font-bold">Close confirmation</button>
                 </form>
             </div>
         </div>
@@ -67,5 +67,6 @@
 
     <script src="./script.js"></script>
     <script src="./navigate.js"></script>
+    <script src="./history.js"></script>
 </body>
 </html>

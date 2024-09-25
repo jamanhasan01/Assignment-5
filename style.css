@@ -8,14 +8,39 @@
 :root:has(:is(.modal-open,.modal:target,.modal-toggle:checked + .modal,.modal[open])){
     scrollbar-gutter:  unset !important;
 }
+main.main {
+    margin-top: 230px;
+}
 .active2{
     background-color:#B4F461 !important;
     color: black !important;
 }
-
+.fixed-header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+}
 .show{
     display: flex;
 }
 .hide{
-    display:none;
+    display:none !important;
+}
+.historyDiv{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    
+}
+.historyDiv h2 {
+    font-size: 31px;
+    font-weight: 700;
+}
+
+.historyDiv p {
+    font-size: 19px;
+    color: #0000009e;
 }

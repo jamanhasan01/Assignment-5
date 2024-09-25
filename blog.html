@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog Plage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header bg-white ">
+        <!-- Navbar section -->
+        <div class="bg-[#F9F7F3]">
+            <nav class="w-[90%] mx-auto flex justify-between py-5">
+                <a href="./index.html"> <button class="btn bg-[#B4F461] text-xl  px-7">Home</button></a>
+                <div class="hidden justify-center items-center gap-4 lg:flex">
+                    <img src="./assets/logo.png" alt="Logo">
+                    <h4 class="text-xl font-bold">Donate Bangladesh</h4>
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                    <img src="./assets/coin.png" alt="Coin">
+                    <h4 class="text-xl font-bold text-gray-600"><span id="totalAmount">5500</span> BDT</h4>
+                </div>
+            </nav>
+        </div>
+    </header>  
+
+    <section class="mt-[100px]">
+        <div class="w-[90%] mx-auto">
+            <h1 class="text-4xl py-5 font-bold">Important FAQ ?</h1>
+            <div class="join join-vertical w-full">
+                <div class="collapse py-5 collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What Is The Document Object Model (DOM)?</div>
+                  <div class="collapse-content">
+                    <input class="outline-none w-full" type="text" placeholder="write your own ans">
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How Do You select on element from the DOM?</div>
+                  <div class="collapse-content">
+                    <input class="outline-none w-full" type="text" placeholder="write your own ans">
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,and why is it useful?</div>
+                  <div class="collapse-content">
+                    <input class="outline-none w-full" type="text" placeholder="write your own ans">
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you monipulate on element's attributes and styles useing the DOM?</div>
+                    <div class="collapse-content">
+                      <input class="outline-none w-full" type="text" placeholder="write your own ans">
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+
+</body>
+</html>

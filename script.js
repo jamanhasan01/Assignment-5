@@ -27,19 +27,19 @@ function contentFunc() {
     donationWrap.innerHTML = ""; // Clear previous content
     content.forEach((item) => {
         const cardDiv = document.createElement("div");
-        cardDiv.classList.add("flex", "flex-1", "p-6", "border-gray-300", "border-2", "rounded-xl", "gap-5");
+        cardDiv.classList.add("flex", "flex-1", "p-6", "border-gray-300", "border-2", "rounded-xl", "gap-5","flex-col","lg:flex-row");
 
         cardDiv.innerHTML = `
-            <img  src="${item.donationImg}" alt="${item.title}">
-            <div id="Scard-Cont" class="flex flex-col items-start justify-between">
+            <img class="w-[full] lg:w-[30%]"  src="${item.donationImg}" alt="${item.title}">
+            <div id="Scard-Cont" class="flex flex-col items-start justify-between gap-4 ">
                 <div class="flex px-3 py-2 bg-slate-200 text-gray-500 text-xl font-bold rounded-lg gap-2">
-                    <img src="./assets/coin.png" alt="Coin">
+                    <img  src="./assets/coin.png" alt="Coin">
                     <h5 class="addMoney">0 BDT</h5>
                 </div>
-                <h1 class="text-xl font-bold">${item.title}</h1>
+                <h1 class="getH1 text-xl font-bold">${item.title}</h1>
                 <p class="text-gray-500 text-lg">${item.pera}</p>
                 <input type="text" class="px-7 py-3 border-gray-200 border-2 rounded-lg w-full inputAmount" placeholder="Write Donation Amount">
-                <button class="btn bg-[#B4F461] text-xl px-7 w-full donateBtn">Donate Now</button>
+                <button class="btn bg-[#B4F461] active2 text-xl px-7 w-full donateBtn">Donate Now</button>
             </div>
         `;
         donationWrap.appendChild(cardDiv);
@@ -47,6 +47,7 @@ function contentFunc() {
 
     addEventListeners(); 
 }
+
 
 function addEventListeners() {
     const donateButtons = document.querySelectorAll(".donateBtn");
