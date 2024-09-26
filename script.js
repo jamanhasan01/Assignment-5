@@ -58,7 +58,7 @@ function addEventListeners() {
     const addMoneyFields = document.querySelectorAll(".addMoney");
 
     donateButtons.forEach((btn, index) => {
-        let cardDonation = 0; // Track donation 
+        let cardDonation = 0; 
         btn.addEventListener("click", (e) => {
             e.preventDefault();
             let inputValue = inputAmounts[index].value;
