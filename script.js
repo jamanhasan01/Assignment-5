@@ -3,6 +3,7 @@ let modal = document.getElementById("my_modal_5");
 let donationWrap = document.getElementById("donationWrap");
 let totalCoin = 5500; // Initial balance
 
+
 // Content data for multiple cards
 let content = [
     {
@@ -24,13 +25,13 @@ let content = [
 
 // Function to dynamically generate the donation cards
 function contentFunc() {
-    donationWrap.innerHTML = ""; // Clear previous content
+    donationWrap.innerHTML = ""; 
     content.forEach((item) => {
         const cardDiv = document.createElement("div");
         cardDiv.classList.add("flex", "flex-1", "p-6", "border-gray-300", "border-2", "rounded-xl", "gap-5","flex-col","lg:flex-row");
 
         cardDiv.innerHTML = `
-            <img class="w-[full] lg:w-[30%]"  src="${item.donationImg}" alt="${item.title}">
+            <img class="w-[full] lg:w-[30%]"  src="${item.donationImg}">
             <div id="Scard-Cont" class="flex flex-col items-start justify-between gap-4 ">
                 <div class="flex px-3 py-2 bg-slate-200 text-gray-500 text-xl font-bold rounded-lg gap-2">
                     <img  src="./assets/coin.png" alt="Coin">
@@ -44,8 +45,10 @@ function contentFunc() {
         `;
         donationWrap.appendChild(cardDiv);
     });
-
+    historyFucn()
     addEventListeners(); 
+    
+   
 }
 
 
@@ -55,11 +58,13 @@ function addEventListeners() {
     const addMoneyFields = document.querySelectorAll(".addMoney");
 
     donateButtons.forEach((btn, index) => {
-        let cardDonation = 0; // Track donation per card
+        let cardDonation = 0; // Track donation 
         btn.addEventListener("click", (e) => {
             e.preventDefault();
             let inputValue = inputAmounts[index].value;
 
+            
+            
             // Number Ensure
             if (!isNaN(inputValue) && inputValue.trim() !== "") {
                 let donationAmount = parseInt(inputValue);
@@ -78,6 +83,7 @@ function addEventListeners() {
 
                     // Clear input
                     inputAmounts[index].value = "";
+                   
 
                 } else {
                     alert("You don't have enough balance.");
@@ -93,3 +99,92 @@ function addEventListeners() {
 }
 
 contentFunc(); 
+
+
+
+
+
+
+function historyFucn() {
+    const donateButtons = document.querySelectorAll(".donateBtn");
+const historyWrap = document.getElementById("historyWrap");
+const getH1 = document.querySelectorAll(".getH1");
+const inputAmount=document.querySelectorAll(".inputAmount")
+
+
+    donateButtons.forEach((btn,index)=>{
+    
+        let h1=getH1[index].textContent
+        let date=new Date()
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault();
+
+            let inputValue = inputAmount[index].value; 
+           
+            if (!isNaN(inputValue)) {
+               
+   
+                
+                let div=document.createElement("div")
+                div.classList.add("historyDiv")
+
+                let h2=document.createElement("h2")
+                let p=document.createElement("p")
+                
+                
+                h2.innerHTML=`${inputValue} Taka Is ${h1}`
+                p.textContent=date
+               
+
+                div.appendChild(h2)
+                div.appendChild(p)
+
+                historyWrap.appendChild(div)
+
+                
+            }
+             
+        })
+    
+    })
+
+
+
+
+// myModalBtn.addEventListener("click",()=>{
+    
+//     donateButtons.forEach((btn, index) => {
+    
+      
+//         btn.addEventListener("click", () => {
+//             let h1 = getH1[index].textContent;
+//             if (true) {
+//                 let date = new Date();
+    
+          
+                // let div = document.createElement("div");
+
+                // let h2 = document.createElement("h2");
+                // let p = document.createElement("p");
+                  
+                  
+                // p.textContent = date;
+                // h2.textContent = h1;
+                // console.log(h1);
+          
+                // div.classList.add("historyDiv");
+                // div.appendChild(h2);
+                // div.appendChild(p);
+                // div.innerHTML=`<h1>${h1}<h1>`
+//                 historyWrap.innerHTML=`
+//                     <div><h1>${h1}</h1></div>
+//                 `
+//             }
+//         });
+//       });
+    
+// })
+}
+
+
+

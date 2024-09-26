@@ -33,7 +33,9 @@ main.main {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid gray;
-    
+    padding: 20px;
+    border: 1px solid #8080804a;
+    border-radius: 12px;
 }
 .historyDiv h2 {
     font-size: 31px;
